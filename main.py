@@ -14,13 +14,15 @@ with dpg.font_registry():
 
 with dpg.window(tag="Base_window") as Base_window:
     dpg.bind_item_font(Base_window, "myFont")
-    dpg.add_button(label='获取网易云音乐标题!')
+    dpg.add_button(label='点击获取标题!',callback=getMusic)
     
 # with dpg.window(label="音乐"):
 #     dpg.add_text("Hello, world")
 #     dpg.add_button(label="Save")
 #     dpg.add_input_text(label="string", default_value="Quick brown fox")
 #     dpg.add_slider_float(label="float", default_value=0.273, max_value=1)
+
+dpg.set_viewport_large_icon("Asset/app.ico")
 
 dpg.setup_dearpygui()
 dpg.show_viewport()
